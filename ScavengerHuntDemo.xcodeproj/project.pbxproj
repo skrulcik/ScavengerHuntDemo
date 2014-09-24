@@ -14,6 +14,7 @@
 		D253107D19D21F1A0077E028 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253107B19D21F1A0077E028 /* LaunchScreen.xib */; };
 		D253108919D21F1A0077E028 /* ScavengerHuntDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253108819D21F1A0077E028 /* ScavengerHuntDemoTests.swift */; };
 		D253109519D2253A0077E028 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253109419D2253A0077E028 /* ListViewController.swift */; };
+		D25310C819D247950077E028 /* ScavengerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25310C719D247950077E028 /* ScavengerItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D253108719D21F1A0077E028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D253108819D21F1A0077E028 /* ScavengerHuntDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntDemoTests.swift; sourceTree = "<group>"; };
 		D253109419D2253A0077E028 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = Controllers/ListViewController.swift; sourceTree = "<group>"; };
+		D25310C719D247950077E028 /* ScavengerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScavengerItem.swift; path = ../Model/ScavengerItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		D253106F19D21F1A0077E028 /* ScavengerHuntDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D25310CB19D25E110077E028 /* Model */,
 				D253109619D2257D0077E028 /* Controllers */,
 				D253107219D21F1A0077E028 /* AppDelegate.swift */,
 				D253107619D21F1A0077E028 /* Main.storyboard */,
@@ -121,6 +124,14 @@
 				D253107419D21F1A0077E028 /* ViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D25310CB19D25E110077E028 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D25310C719D247950077E028 /* ScavengerItem.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 				D253107519D21F1A0077E028 /* ViewController.swift in Sources */,
 				D253107319D21F1A0077E028 /* AppDelegate.swift in Sources */,
 				D253109519D2253A0077E028 /* ListViewController.swift in Sources */,
+				D25310C819D247950077E028 /* ScavengerItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
