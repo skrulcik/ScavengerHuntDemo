@@ -10,16 +10,16 @@ import UIKit
 
 class ListViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
-    var itemsList = [ScavengerHuntItem]()
+    var itemsManager = ItemsManager()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemsList.count
+        return itemsManager.items.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("GoalCell") as UITableViewCell
-        let item = itemsList[indexPath.row]
+        let item = itemsManager.items[indexPath.row]
         cell.textLabel!.text = item.name
         
         if item.isComplete {
@@ -49,10 +49,11 @@ class ListViewController: UITableViewController, UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let indexPath = tableView.indexPathForSelectedRow()
-        let selectedItem = itemsList[indexPath!.row]
+        let selectedItem = itemsManager.items[indexPath!.row]
         
         let photo = info[UIImagePickerControllerOriginalImage] as UIImage
         selectedItem.photo = photo
+        itemsManager.save()
         
         dismissViewControllerAnimated(true, completion:{
             self.tableView.deselectRowAtIndexPath(indexPath!, animated: true)
@@ -66,8 +67,9 @@ class ListViewController: UITableViewController, UIImagePickerControllerDelegate
     {
         let addController = segue.sourceViewController as ViewController
         if let newItem = addController.createdItem{
-            itemsList += [newItem]
-            let indexPath = NSIndexPath(forRow: itemsList.count-1, inSection: 0)
+            itemsManager.items += [newItem]
+            itemsManager.save()
+            let indexPath = NSIndexPath(forRow: itemsManager.items.count-1, inSection: 0)
             tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }

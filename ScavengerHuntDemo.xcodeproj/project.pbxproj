@@ -15,6 +15,7 @@
 		D253108919D21F1A0077E028 /* ScavengerHuntDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253108819D21F1A0077E028 /* ScavengerHuntDemoTests.swift */; };
 		D253109519D2253A0077E028 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253109419D2253A0077E028 /* ListViewController.swift */; };
 		D25310C819D247950077E028 /* ScavengerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25310C719D247950077E028 /* ScavengerItem.swift */; };
+		D25310CD19D25EA30077E028 /* ItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25310CC19D25EA30077E028 /* ItemsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D253108819D21F1A0077E028 /* ScavengerHuntDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntDemoTests.swift; sourceTree = "<group>"; };
 		D253109419D2253A0077E028 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = Controllers/ListViewController.swift; sourceTree = "<group>"; };
 		D25310C719D247950077E028 /* ScavengerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScavengerItem.swift; path = ../Model/ScavengerItem.swift; sourceTree = "<group>"; };
+		D25310CC19D25EA30077E028 /* ItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsManager.swift; path = Model/ItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				D25310C719D247950077E028 /* ScavengerItem.swift */,
+				D25310CC19D25EA30077E028 /* ItemsManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				D253107319D21F1A0077E028 /* AppDelegate.swift in Sources */,
 				D253109519D2253A0077E028 /* ListViewController.swift in Sources */,
 				D25310C819D247950077E028 /* ScavengerItem.swift in Sources */,
+				D25310CD19D25EA30077E028 /* ItemsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
